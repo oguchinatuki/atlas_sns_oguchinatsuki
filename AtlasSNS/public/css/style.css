@@ -1,22 +1,99 @@
 @charset "utf-8";
-html{
-}
-body{
-}
+
+html {}
+
+body {}
+
 /* header */
-header{
-    background:#186AC9;
+
+#head {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background: #186AC9;
+}
+
+.accordion {
+    margin-top: 30px;
+    max-width: 300px;
+    position: relative;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px 20px;
+}
+
+.accordion-title {
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.accordion-user {
+    display: flex;
+}
+
+.accordion-name {
+    margin-right: 10px;
+
+}
+
+.accordion-icon {
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.atlas-logo {
+    width: 100px;
+}
+
+/*矢印*/
+.accordion-title {
+    position: relative;
+}
+
+.accordion-title::after {
+    border-right: solid 2px #fff;
+    border-top: solid 2px #fff;
+    content: "";
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 7px;
+    top: 38%;
+    transform: rotate(135deg);
+    transition: transform .3s ease-in-out, top .3s ease-in-out;
+    width: 8px;
+}
+
+.accordion-title.open::after {
+    top: 45%;
+    transform: rotate(-45deg);
 }
 
 /* main content */
-#row{
+#row {
     display: flex;
     flex-flow: row wrap;
 }
-#container{
+
+#container {
     flex: 0 0 80%;
 }
-#side-bar{
+
+#side-bar {
     flex: 0 0 19%;
     border-left: 1px solid #727272;
 }
